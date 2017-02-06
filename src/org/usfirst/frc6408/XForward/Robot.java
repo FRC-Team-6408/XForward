@@ -74,9 +74,9 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during autonomous
      */
     public void autonomousPeriodic() {
-    	
         Scheduler.getInstance().run();
-        autonomousCommand = new Dance();
+        autonomousCommand = new Dance();//runs the command
+        autonomousCommand.cancel();
     }
 
     public void teleopInit() {
