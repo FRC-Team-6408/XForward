@@ -33,6 +33,7 @@ public class Drive extends Subsystem {
     }
     public void drive(double speed, double curve){
     	robotDrive.drive(speed, curve);
+    	//System.out.println("drive");
     }
 }
 

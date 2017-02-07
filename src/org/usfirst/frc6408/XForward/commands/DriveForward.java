@@ -11,6 +11,9 @@
 
 package org.usfirst.frc6408.XForward.commands;
 import edu.wpi.first.wpilibj.command.Command;
+
+import java.io.Console;
+
 import org.usfirst.frc6408.XForward.Robot;
 
 /**
@@ -30,6 +33,7 @@ public class DriveForward extends Command {
     	setTimeout(time);	//sets up commands
     	this.speed = speed;
     	this.curve = curve;
+    	System.out.println("start drive");
     }
 
     // Called just before this Command runs the first time
@@ -43,15 +47,17 @@ public class DriveForward extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return isTimedOut();
     }
 
     // Called once after isFinished returns true
     protected void end() {
+    	System.out.println("end drive");
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	System.out.println("inturrupt");
     }
 }
